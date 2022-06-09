@@ -2,10 +2,10 @@ module furnace(clock, door_sig, usage, furnace_temp, alarm);
 // Define your input and outputs
 input clock;
 input door_sig, usage;
-output reg [6:0] furnace_temp;
+output reg [6:0] furnace_temp; // it will hold temperature value up to 120 celcius
 output reg alarm;
 
-initial begin
+initial begin 
 	furnace_temp <= 7'd50;
 	alarm <= 1'b0;
 end
