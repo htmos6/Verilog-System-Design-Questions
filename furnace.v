@@ -1,5 +1,5 @@
 module furnace(clock, door_sig, usage, furnace_temp, alarm);
-
+// Define your input and outputs
 input clock;
 input door_sig, usage;
 output reg [6:0] furnace_temp;
