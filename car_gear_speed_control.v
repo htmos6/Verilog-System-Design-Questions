@@ -1,14 +1,16 @@
 module car_gear_speed_control(clock, gas, carbreak, speed, gear);
-
+	// define input and output parameters
 	input clock, gas, carbreak;
 	output reg [1:0] gear;
 	output reg [6:0] speed;
-
+	
+	// initially set corresponding values --> speed as 0 and gear as 1
 	initial begin
 		speed <= 7'd0;
 		gear <= 2'd1;
 	end
-
+	
+	// every positive clock edge 
 	always @(posedge clock) begin
 	
 		if (gear == 2'd1) begin
@@ -78,17 +80,3 @@ module car_gear_speed_control(clock, gas, carbreak, speed, gear);
 		end
 	end
 endmodule
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-						
